@@ -5,6 +5,6 @@ namespace XamlAttachedPropertyReproduction
 {
     public class App:Application
     {
-        public App() => MainPage = new NavigationPage(new EffectsPage());
+        public App() => MainPage = new NavigationPage(new MainPage());
     }
 }

@@ -4,11 +4,11 @@ using EntryCustomReturn.Forms.Plugin.Abstractions;
 
 namespace XamlAttachedPropertyReproduction
 {
-    public partial class EffectsPage : ContentPage
+    public partial class MainPage : ContentPage
     {
         Command _returnCommand;
 
-        public EffectsPage()
+        public MainPage()
         {
             InitializeComponent();
 

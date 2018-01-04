@@ -2,7 +2,7 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="XamlAttachedPropertyReproduction.EffectsPage"
+    x:Class="XamlAttachedPropertyReproduction.MainPage"
     xmlns:entryCustomReturn="clr-namespace:EntryCustomReturn.Forms.Plugin.Abstractions;assembly=EntryCustomReturn.Forms.Plugin.Abstractions">
     
     <ContentPage.Content>
@@ -15,8 +15,8 @@
                 x:Name = "EffectsEntry"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                Placeholder="Effects: Tap Here, Then Tap Return"/>
-    <!--            entryCustomReturn:CustomReturnEffect.ReturnType="{x:Static entryCustomReturn:ReturnType.Go}"/>-->
+                Placeholder="Effects: Tap Here, Then Tap Return"
+                entryCustomReturn:CustomReturnEffect.ReturnType="{x:Static entryCustomReturn:ReturnType.Go}"/>
 
             <entryCustomReturn:CustomReturnEntry
                 x:Name = "CustomReturnEntry"
