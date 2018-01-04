@@ -6,11 +6,17 @@ namespace XamlAttachedPropertyReproduction
 {
     public partial class EffectsPage : ContentPage
     {
+        Command _returnCommand;
+
         public EffectsPage()
         {
             InitializeComponent();
 
-            CustomReturnEffect.SetReturnCommand(EffectsEntry, new Command(async () => await DisplayAlert("Return Tapped", "", "Ok")));
+            CustomReturnEntry.ReturnCommand = ReturnCommand;
+
+            CustomReturnEffect.SetReturnCommand(EffectsEntry, ReturnCommand);
         }
+
+        Command ReturnCommand => _returnCommand ?? (_returnCommand = new Command(async entry => await DisplayAlert("Return Tapped", "", "Ok")));
     }
 }

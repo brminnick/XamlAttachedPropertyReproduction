@@ -7,12 +7,23 @@
     
     <ContentPage.Content>
 
-        <Entry
-            x:Name = "EffectsEntry"
+        <StackLayout
             HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Placeholder="Tap Here, Then Tap Return"
-            entryCustomReturn:CustomReturnEffect.ReturnType="{x:Static entryCustomReturn:ReturnType.Go}"/>
+            VerticalOptions="Center">
+        
+            <Entry
+                x:Name = "EffectsEntry"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Placeholder="Effects: Tap Here, Then Tap Return"/>
+    <!--            entryCustomReturn:CustomReturnEffect.ReturnType="{x:Static entryCustomReturn:ReturnType.Go}"/>-->
+
+            <entryCustomReturn:CustomReturnEntry
+                x:Name = "CustomReturnEntry"
+                Placeholder="CustomRenderer: Tap Here, Then Tap Return"
+                ReturnType="Go"/>
+
+            </StackLayout>
         
     </ContentPage.Content>
 </ContentPage>
